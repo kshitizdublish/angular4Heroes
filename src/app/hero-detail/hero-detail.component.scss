@@ -1,0 +1,13 @@
+@import '../../_variables';
+
+.hero-detail-component {
+    padding: 10px;
+}
+
+.table-bordered {
+    border: 2px solid $black;
+    width: 100%;
+    thead > tr > td {
+        font-weight: $bold;
+    }
+}

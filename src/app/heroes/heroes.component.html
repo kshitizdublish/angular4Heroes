@@ -1,0 +1,26 @@
+<div class="hero-component">
+
+	<!-- <accordion [closeOthers]="oneAtATime">
+		<accordion-group *ngFor="let hero of heroes" 
+			heading="{{ hero.name | uppercase }} Details" 
+			(click)="onSelect(hero)" [class]="hero === selectedHero">
+			<ul>
+				<li>Id: {{hero.id}}</li>
+				<li>Name:
+					<input [(ngModel)]="hero.name" placeholder="name">
+				</li>
+			</ul>
+		</accordion-group>
+	</accordion> -->
+
+	<h2>My Heroes</h2>
+
+	<ul class="heroes">
+		<li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+			<span class="badge">{{hero.id}}</span> {{hero.name}}
+		</li>
+	</ul>
+
+	<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+</div>

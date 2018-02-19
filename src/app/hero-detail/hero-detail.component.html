@@ -1,0 +1,20 @@
+<div class="hero-detail-component" *ngIf="hero">
+
+	<h2>Edit {{ hero.name | uppercase }} Details</h2>
+	<hr />
+	<table class="table-bordered">
+		<thead>
+			<tr>
+				<td>Id</td>
+				<td>Name</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>{{hero.id}}</td>
+				<td><input [(ngModel)]="hero.name" placeholder="name" /></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
